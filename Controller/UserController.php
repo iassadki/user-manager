@@ -97,4 +97,11 @@ class userController {
         require('./View/default.php');
     }
 
+    // fonction usersList
+    public function usersList() {
+        $page = 'usersList';
+        $users = $this->userManager->findAll();
+        require('./View/default.php');
+    }
+
 }
