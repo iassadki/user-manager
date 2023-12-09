@@ -44,13 +44,27 @@ class userController {
         $result = $this->userManager->login($email, $password);        
         // $result = //_____ ;
 
-        if ( $result ) :
+        // if ( $result ) :
+        //     $info = "Connexion reussie";
+        //     $_SESSION['user'] = $result;
+        //     $page = 'home';
+        // else :
+        //     $info = "Identifiants incorrects.";
+        // endif;
+
+        // condition si il est admin alors on va sur la page admin.ph sinon on va sur la page home.php
+        if ($result) {
             $info = "Connexion reussie";
             $_SESSION['user'] = $result;
-            $page = 'home';
-        else :
+            if ($result['admin'] == 1) {
+                $page = 'admin';
+            } else {
+                $page = 'home';
+            }
+        } else {
             $info = "Identifiants incorrects.";
-        endif;
+            $page = 'login';
+        }
         
         require('./View/default.php');
     }
@@ -86,6 +100,14 @@ class userController {
 
     public function create() {
         $page = 'createAccount';
+        require('./View/default.php');
+    }
+
+    public function delete() {
+        $id = $_GET['id'];
+        $this->userManager->delete($id);
+        $users = $this->userManager->findAll();
+        $page = 'usersList';
         require('./View/default.php');
     }
 
