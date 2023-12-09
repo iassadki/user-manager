@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <body>
-    
-<!-- <section id="main-section"> -->
-    
-<!-- Monthly box -->
-<div id="monthly-box">
-</div>
-<!-- End Monthly Box -->
+        
+<div id="monthly-box"></div>
 
-<div id="newItems">
-</div>
-<!-- </section> -->
+<div id="newItems"></div>
 
 </body>
 </html>

@@ -9,9 +9,7 @@ class userController {
         require('./Model/User.php');
         require_once('./Model/UserManager.php');
         $this->userManager = new UserManager($db);
-        
-        // $this->db = $db1 ;
-        
+                
     }
 
     public function home() {
@@ -99,9 +97,15 @@ class userController {
 
     // fonction usersList
     public function usersList() {
-        $page = 'usersList';
-        $users = $this->userManager->findAll();
-        require('./View/default.php');
+        if (isset($_SESSION['user'])) {
+            $users = $this->userManager->findAll();
+            $page = 'usersList';
+        	require('./View/default.php');
+        } else {
+            // echo "Vous n'êtes pas autorisé à consulter cette page !";
+        	$page = 'unauthorized';
+        	require('./View/default.php');
+        }   
     }
 
 }
