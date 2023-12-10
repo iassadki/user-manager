@@ -103,13 +103,13 @@ class userController {
         require('./View/default.php');
     }
 
-    public function delete() {
-        $id = $_GET['id'];
-        $this->userManager->delete($id);
-        $users = $this->userManager->findAll();
-        $page = 'usersList';
-        require('./View/default.php');
-    }
+    // public function delete() {
+    //     $id = $_GET['id'];
+    //     $this->userManager->delete($id);
+    //     $users = $this->userManager->findAll();
+    //     $page = 'usersList';
+    //     require('./View/default.php');
+    // }
 
     // fonction unauthorized
     public function unauthorized() {
@@ -123,8 +123,11 @@ class userController {
             $users = $this->userManager->findAll();
             $page = 'usersList';
         	require('./View/default.php');
+        } else if (isset($_SESSION['admin']) && $user['admin'] == 1) { // $result = $this->userManager->login($email, $password); __ $result['admin'] == 1  
+            $users = $this->userManager->findAll();
+            $page = 'usersListAdmin';
+        	require('./View/default.php'); 
         } else {
-            // echo "Vous n'êtes pas autorisé à consulter cette page !";
         	$page = 'unauthorized';
         	require('./View/default.php');
         }   
