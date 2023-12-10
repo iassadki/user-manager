@@ -17,6 +17,16 @@ class userController {
         require('./View/default.php');
     }
 
+    public function homeUser() {
+        $page = 'homeUser';
+        require('./View/default.php');
+    }
+
+    public function homeAdmin() {
+        $page = 'homeAdmin';
+        require('./View/default.php');
+    }
+
     // public function display() {
     //     $page = 'home';
     //     $user = null;
@@ -57,9 +67,9 @@ class userController {
             $info = "Connexion reussie";
             $_SESSION['user'] = $result;
             if ($result['admin'] == 1) {
-                $page = 'admin';
+                $page = 'homeAdmin';
             } else {
-                $page = 'home';
+                $page = 'homeUser';
             }
         } else {
             $info = "Identifiants incorrects.";

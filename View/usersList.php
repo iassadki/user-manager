@@ -1,7 +1,7 @@
 <!-- Page qui liste les utilisateurs sous forme de tableau -->
 <!-- si user est connecté, alors on voir les utiilisateurs, sinon on affiche la page unauthorized -->
 <?php if (isset($_SESSION['user'])) : ?>
-    <center><h1>Users List - User Profile</h1></center>
+    <center><h1>Users List</h1></center>
     <table>
         <thead>
             <tr>
