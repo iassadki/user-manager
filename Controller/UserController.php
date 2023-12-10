@@ -62,7 +62,6 @@ class userController {
         //     $info = "Identifiants incorrects.";
         // endif;
 
-        // condition si il est admin alors on va sur la page admin.ph sinon on va sur la page home.php
         if ($result) {
             $info = "Connexion reussie";
             $_SESSION['user'] = $result;
@@ -72,7 +71,7 @@ class userController {
                 $page = 'homeUser';
             }
         } else {
-            $info = "Identifiants incorrects.";
+            $erreurConn = "The email or password is incorrect";
             $page = 'login';
         }
         

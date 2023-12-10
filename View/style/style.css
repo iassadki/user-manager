@@ -33,4 +33,11 @@ form {
     text-align: center;
 }
 
+.error-message {
+    color: #ff0000;
+    /* Rouge */
+    font-size: 14px;
+    margin-top: 10px;
+}
+
 /* Buttons */
