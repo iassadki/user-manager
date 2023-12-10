@@ -62,6 +62,8 @@ class userController {
         //     $info = "Identifiants incorrects.";
         // endif;
 
+        $erreurConn = "";
+
         if ($result) {
             $info = "Connexion reussie";
             $_SESSION['user'] = $result;
@@ -71,7 +73,7 @@ class userController {
                 $page = 'homeUser';
             }
         } else {
-            $erreurConn = "The email or password is incorrect";
+            $error = "The email or password is incorrect";
             $page = 'login';
         }
         
@@ -93,14 +95,14 @@ class userController {
             isset($_POST['postalCode']) &&
             isset($_POST['city'])) {
 
-        $alreadyExist = $this->userManager->findByEmail($_POST['email']); // Add this line to check if the email already exist
+        $alreadyExist = $this->userManager->findByEmail($_POST['email']);
         
         if (!$alreadyExist) {
             $newUser = new User($_POST);
             $this->userManager->create($newUser); // 
             $page = 'login';
         } else {
-            $error = "ERROR : This email (" . $_POST['email'] . ") is used by another user";
+            $error = "ERROR : The email (" . $_POST['email'] . ") is already used by another user";
             $page = 'createAccount';
         }
         }

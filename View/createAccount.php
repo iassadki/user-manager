@@ -12,6 +12,7 @@
         <p>
             <input type="submit" class="submit-btn" value="Create">
         </p>
+        <div class="error-message"><p><?php if(isset($error)) echo $error; ?></p></div>
     </form>
     <span></span>
     </div>

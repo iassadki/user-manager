@@ -8,6 +8,7 @@
             <input type="submit" class="submit-btn" value="Connect">
         </p>
         <!-- <div class="error-message"><?php echo $erreurConn; ?></div> -->
+        <div class="error-message"><p><?php if(isset($error)) echo $error; ?></p></div>
     </form>
     <p></p>
 

@@ -30,7 +30,7 @@ class UserManager
         $req->bindValue(':email', $email);
         $req->execute();
         $user = $req->fetch(PDO::FETCH_ASSOC);
-        if (password_verify($password, $user['password'])) {
+        if ($user !== false && isset($user['password']) && password_verify($password, $user['password'])) {
             return $user;
         } else {
             return false;
