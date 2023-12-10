@@ -102,7 +102,7 @@ class userController {
             $this->userManager->create($newUser); // 
             $page = 'login';
         } else {
-            $error = "ERROR : The email (" . $_POST['email'] . ") is already used by another user";
+            $error = "The email (" . $_POST['email'] . ") is already used by another user";
             $page = 'createAccount';
         }
         }
