@@ -5,11 +5,9 @@ class userController {
     private $user;
  
     public function __construct($db) {
- 
         require('./Model/User.php');
         require_once('./Model/UserManager.php');
         $this->userManager = new UserManager($db);
-                
     }
 
     public function home() {
@@ -27,19 +25,6 @@ class userController {
         require('./View/default.php');
     }
 
-    // public function display() {
-    //     $page = 'home';
-    //     $user = null;
-    //     $admin = false;
-    //     if (isset($_SESSION['user']['email'])) {
-    //         $user = $this->userManager->findByEmail($_SESSION['user']['email']);
-    //         if ($user['admin'] == 1) {
-    //             $admin = true;
-    //         }
-    //     }
-    //     require('./View/default.php');
-    // }
-
     public function login() {
         $page = 'login';
         require('./View/default.php');
@@ -49,20 +34,7 @@ class userController {
         $email = $_POST['email']; 
         $password = $_POST['password']; 
 
-        // Le user extrait par le UserManager est renvoyé dans $result
-        // A vous d'écrire les 3 lignes correspondantes
         $result = $this->userManager->login($email, $password);        
-        // $result = //_____ ;
-
-        // if ( $result ) :
-        //     $info = "Connexion reussie";
-        //     $_SESSION['user'] = $result;
-        //     $page = 'home';
-        // else :
-        //     $info = "Identifiants incorrects.";
-        // endif;
-
-        $erreurConn = "";
 
         if ($result) {
             $info = "Connexion reussie";
@@ -114,27 +86,17 @@ class userController {
         require('./View/default.php');
     }
 
-    // public function delete() {
-    //     $id = $_GET['id'];
-    //     $this->userManager->delete($id);
-    //     $users = $this->userManager->findAll();
-    //     $page = 'usersList';
-    //     require('./View/default.php');
-    // }
-
-    // fonction unauthorized
     public function unauthorized() {
         $page = 'unauthorized';
         require('./View/default.php');
     }
 
-    // fonction usersList
     public function usersList() {
         if (isset($_SESSION['user'])) {
             $users = $this->userManager->findAll();
             $page = 'usersList';
         	require('./View/default.php');
-        } else if (isset($_SESSION['admin']) && $user['admin'] == 1) { // $result = $this->userManager->login($email, $password); __ $result['admin'] == 1  
+        } else if (isset($_SESSION['admin']) && $user['admin'] == 1) {
             $users = $this->userManager->findAll();
             $page = 'usersListAdmin';
         	require('./View/default.php'); 
@@ -143,5 +105,4 @@ class userController {
         	require('./View/default.php');
         }   
     }
-
 }

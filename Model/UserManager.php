@@ -13,7 +13,6 @@ class UserManager
         $req = $this->db->prepare("INSERT INTO $this->table(email, password, firstName, lastName, address, postalCode, city, admin) 
         VALUES (:email, :password, :firstName, :lastName, :address, :postalCode, :city, :admin)");
 
-        // Remove the admin column from here unless you have a specific reason to set it here
         $req->bindValue(':email', $user->getEmail());
         $req->bindValue(':password', password_hash($user->getPassword(), PASSWORD_DEFAULT));
         $req->bindValue(':firstName', $user->getFirstName());
@@ -87,7 +86,6 @@ class UserManager
         } else {
             return new User($user);
         }
-        // return new User($user); //
     }
     
     public function verify_ID_PASSWORD() {

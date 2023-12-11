@@ -1,8 +1,7 @@
 <?php
 session_start();
-
-// La navigation dans l'application s'effectue en adressant à la page index.php deux variables $_GET : 
-// ctrl et action.
+// La navigation dans l'application s'effectue en adressant à la page index.php 
+// à l'aide des deux variables $_GET : ctrl et action
 // Exemple: index.php?ctrl=user&action=login 
 ?>
 
@@ -15,11 +14,8 @@ session_start();
     <link href="View/style/general.css" rel="stylesheet" type="text/css">
     <link href="View/style/header-footer.css" rel="stylesheet" type="text/css">
     <link href="View/style/mainSection.css" rel="stylesheet" type="text/css">
-    <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Nunito|Glegoo" rel="stylesheet">
-    <!-- Fontawesome -->
     <script src="./View/js/fontawesome-all.min.js"></script>
-    <!-- Icon -->
     <link href="./View/img/icon.png" rel="icon">
 </head>
 
@@ -36,13 +32,11 @@ if (
     $ctrl = $_GET['ctrl'];
     $action = $_GET['action'];
 } else {
-    $ctrl = 'UserController'; // Utilise le nom correct du contrôleur par défaut
+    $ctrl = 'UserController'; // Nom du controleur par défaut
     $action = 'home';
 }
 
-// require_once('./Controller/UserController.php');
 require_once('./Controller/' . $ctrl . '.php'); 
-// $ctrlName = $ctrl;
 
 try {
     $controller = new $ctrl($db);

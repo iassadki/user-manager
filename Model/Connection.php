@@ -5,7 +5,7 @@ class Connection
     private string $dbname;
     private string $username;
     private string $password;
-    private ?PDO $db = null; // Make it nullable to handle initialization
+    private ?PDO $db = null;
 
     public function __construct()
     {
