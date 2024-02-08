@@ -4,8 +4,9 @@
 Site où l'on peut créer un compte, s'y connecter et voir la liste d'utilisateurs disponibles dans la base de données
 
 ##### Pages
-- Connexion
 - Accueil
+- Connexion
+- Création de compte
 - Liste des utilisateurs
 
 ### Technologies & Frameworks
