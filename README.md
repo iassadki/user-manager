@@ -3,7 +3,7 @@
 ### Description
 Site où l'on peut créer un compte, s'y connecter et voir la liste d'utilisateurs disponibles dans la base de données
 
-##### Pages
+#### Pages
 - Accueil
 - Connexion
 - Création de compte
