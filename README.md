@@ -10,7 +10,9 @@ Site où l'on peut créer un compte, s'y connecter et voir la liste d'utilisateu
 - Liste des utilisateurs
 
 ### Technologies & Frameworks
-PHP, MVC, MySQL, HTML, CSS
+Architecture : MVC
+Langages : PHP, HTML, CSS
+Base de données : SQL (MySQL)
 
 <!-- ### **Conception du projet**
 
