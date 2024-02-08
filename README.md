@@ -19,7 +19,7 @@ Base de données : SQL (MySQL)
 - Ce projet ne comprend pas de conception UML -->
 
 ### Démonstration
-- Une démonstration visuelle ou interactive du projet
+video... 
 
 ### Lien du projet
 Lien du site web : **https://iassadki.alwaysdata.net/**
