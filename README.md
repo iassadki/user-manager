@@ -20,4 +20,3 @@ PHP, MVC, MySQL, HTML, CSS
 
 ### Lien du projet
 Lien du site web : **https://iassadki.alwaysdata.net/**
-La version de ce repo est la version localhost de mon site
