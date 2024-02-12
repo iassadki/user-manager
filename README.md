@@ -5,7 +5,7 @@ Site où l'on peut créer un compte, s'y connecter et voir la liste d'utilisateu
 
 ### Fonctionnalités
 - Se connecter/Creer un compte
-- Voir les utilisateurs dans la base de données
+- Voir les utilisateurs présents dans la base de données
 
 ### Technologies & Frameworks
 Architecture : `MVC`
