@@ -33,4 +33,4 @@ Site où l'on peut créer un compte, s'y connecter et voir la liste d'utilisateu
 (video en cours de création...)
 
 ### Lien du projet
-**[Lien du site web](https://iassadki.alwaysdata.net/usermanager)**
+**[User Manager](https://iassadki.alwaysdata.net/usermanager)**
