@@ -1,36 +1,21 @@
 ﻿# user-manager
 
-### Description
-Site où l'on peut créer un compte, s'y connecter et voir la liste d'utilisateurs disponibles dans la base de données
+<!-- ![Nom de la capture](https://github.com/brunosllz/visit-card-generator/blob/main/src/assets/github-cover.png) -->
 
-### Fonctionnalités
-- Se connecter/Creer un compte
-- Voir les utilisateurs présents dans la base de données
+## 💻 About the project
+Website where you can create an account, log in and view the list of users available in the database
 
-### Technologies & Frameworks
+## ⚙️ Functionalities
+- Create an account/Log in
+- View users in the database
+
+## 🛠 Technologies
 - Architecture : `MVC`
-- Langages : `PHP`, `HTML`, `CSS`
-- Base de données : `SQL`
+- Languages : `PHP`, `HTML`, `CSS`
+- Databases : `SQL`
 
-<!-- ### Diagrammes/Conception -->
-
-<!-- #### Modèle Conceptuel des Données (MLD)
-```jsx
-![MCD](chemin/vers/votre_image_mcd.png)
-```
-
-#### Modèle Organisationnel des Données (MCD)
-```jsx
-![MCD](chemin/vers/votre_image_mcd.png)
-```
-
-#### Diagramme de Classes UML
-```jsx
-![MCD](chemin/vers/votre_image_mcd.png)
-``` -->
-
-### Démonstration
-(video en cours de création...)
-
-### Lien du projet
+## 🌐 Website
 **[User Manager](https://iassadki.alwaysdata.net/user-manager)**
+
+<!-- ## 💻 Screens/Demo -->
+<!-- ![Demo](https://github.com/brunosllz/visit-card-generator/blob/main/src/assets/github-cover.png) -->
